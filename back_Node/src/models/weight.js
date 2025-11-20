@@ -10,14 +10,22 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      weight.belongsTo(models.Users, {
+        as: "Users",
+        foreignKey: "user_id"
+      })
     }
   }
   weight.init({
-    weight: DataTypes.DECIMAL
+    weight: DataTypes.DECIMAL(3,1)
   }, {
     sequelize,
     modelName: 'weight',
+    tableName: 'weights',
+    underscored: true,
+    timestamps: true,
+    createdAt: 'created_at',
+    updatedAt: 'updated_at'
   });
   return weight;
 };

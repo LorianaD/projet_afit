@@ -11,6 +11,8 @@ function Dashboard() {
         return <Navigate to="/login"/>;
     }
 
+    
+
   return (
     <>
       <h2>Bienvenue</h2>
