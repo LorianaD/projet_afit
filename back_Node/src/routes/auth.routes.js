@@ -1,12 +1,12 @@
 const { Router } = require("express");
 const authController = require('../controllers/auth.controller');
-// recuperer les middleware des rules
+const { registerRules, loginRules } = require('../middlewares/validators/auth.validators');
 
 const router = Router();
 
 router.get('/test', authController.test);
-// ajouter les rules aux routes
-router.post('/register', authController.register);
-router.post('/login', authController.login);
+
+router.post('/register', registerRules, authController.register);
+router.post('/login', loginRules, authController.login);
 
 module.exports = router;

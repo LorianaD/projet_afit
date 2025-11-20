@@ -9,15 +9,25 @@ data -> poids (date)
 courbe d'evolution du poids
 
 fonctionnalité :
-    date de départ de la premiere mesure
-    jours passé depuis la premiere mesure
-    nombre de mesure faites
-    poids le plus haut /
-    poids le plus bas /
-    mon imc (sous-poids / normal / surpoids)
-    poids perdu / pris -> 7 dérniers jours
-    poids perdu / pris -> 30 dérniers jours
-    poids perdu / pris en moyenne/semaine
-    poids perdu / pris en moyenne/mois
-    noter le poids objectif -> faire une estimation du nombre de jours
-    restant pour l'atteindre des qu'on a au moins 3 mésures
+    date de départ de la premiere mesure*
+    jours passé depuis la premiere mesure*
+    nombre de mesure faites-
+    poids le plus haut /*
+    poids le plus bas /*
+    mon imc (sous-poids / normal / surpoids)*
+    poids perdu / pris -> 7 dérniers jours-
+    poids perdu / pris -> 30 dérniers jours-
+    poids perdu / pris en moyenne/semaine-
+    poids perdu / pris en moyenne/mois-
+    noter le poids objectif -> faire une estimation du nombre de jours+
+    restant pour l'atteindre des qu'on a au moins 3 mésures+
+
+Table users :
+name:string
+firstname:string
+username:string
+email:string
+birthday:date
+height:integer
+gender:string
+goal:decimal
