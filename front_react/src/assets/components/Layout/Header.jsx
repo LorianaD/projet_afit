@@ -21,19 +21,19 @@ function Header() {
     <><header>
         <h1><Link to="/">VitaTrack</Link></h1>
         <nav>
-            <ul>
-                <li><Link to="/">Accueil</Link></li>
-                { isLogged ? (
-                  <>
-                    <li><Link to="/dashboard">Mon compte</Link></li>
-                    <li><button onClick={handleLogout}>Se déconnecter</button></li>
-                  </>
-                ) : (
-                  <>
-                    <li><Link to="/login">Se connecter</Link></li>
-                  </>
-                )}
-            </ul>
+          <ul>
+              <li><Link to="/">Accueil</Link></li>
+              { isLogged ? (
+                <>
+                  <li><Link to="/dashboard">Mon compte</Link></li>
+                  <li><button onClick={handleLogout}>Se déconnecter</button></li>
+                </>
+              ) : (
+                <>
+                  <li><Link to="/login">Se connecter</Link></li>
+                </>
+              )}
+          </ul>
         </nav>
       </header>
     </>

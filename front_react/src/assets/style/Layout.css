@@ -1,0 +1,45 @@
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/*************************************************************************
+**************************** HEADER **************************************
+*************************************************************************/
+
+header {
+    background-color: rgba(90, 211, 199, 1);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    /* height: 100%; */
+}
+
+nav>ul {
+    display: flex;
+    gap: 10px;
+}
+
+/*************************************************************************
+**************************** FOOTER **************************************
+*************************************************************************/
+
+footer {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    background-color: rgba(26, 42, 58, 0.6);
+    padding: 30px 20px 10px;
+}
+
+.footer-info {
+    text-align: center;
+}

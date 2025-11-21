@@ -1,5 +1,6 @@
 const authService = require('../services/auth.service');
 const { validationResult } = require('express-validator');
+const { getAge } = require('../utils/calculate');
 
 exports.register = async (req, res) => {
     // console.log("route de register");

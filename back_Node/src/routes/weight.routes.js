@@ -1,10 +1,11 @@
 const { Router } = require("express");
 const weightController = require('../controllers/weight.controller');
-const { registerRules, loginRules } = require('../middlewares/validators/auth.validators');
+const auth = require('../middlewares/auth');
 
 const router = Router();
 
 router.get('/test', weightController.test);
-router.post('/', weightController.createWeight);
+router.post('/', auth, weightController.createWeight);
+router.get('/', auth, weightController.weightList);
 
 module.exports = router;

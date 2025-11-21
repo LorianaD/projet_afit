@@ -31,3 +31,37 @@ birthday:date
 height:integer
 gender:string
 goal:decimal
+
+PALETTE COULEURS
+
+Palette moderne (bien-être + motivation)
+
+-> Vert menthe #9EE0C1 → santé, fraîcheur
+
+-> Bleu doux #6FB3CE → confiance, sérénité
+
+-> Beige clair #F6F4EF → neutralité, douceur
+
+-> Anthracite #2E2E2E → lisibilité, modernité
+
+Palette minimaliste (app pro)
+
+-> Bleu nuit rgba(26, 42, 58, 1)
+
+-> Bleu turquoise rgba(90, 211, 199, 1)
+
+-> Gris clair #EDEDED
+
+-> Blanc #FFFFFF
+
+TYPOGRAPHIES
+
+-> Montserrat → moderne, app-style
+
+-> Poppins → doux, lisible
+
+-> Inter → idéal pour tableaux + données
+
+-> Nunito → très rond, bien-être
+
+“Suivez votre progression, vivez mieux.”

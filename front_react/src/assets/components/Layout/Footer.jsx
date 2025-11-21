@@ -10,7 +10,7 @@ function Footer() {
             <li><Link>Accueil</Link></li>
           </ul>
         </div>
-        <div>
+        <div className="footer-info">
           <span>&copy;2025 VitaTrack - by Loriana DIANO</span>
         </div>
       </footer>
