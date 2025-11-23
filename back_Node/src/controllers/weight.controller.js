@@ -4,7 +4,7 @@ const Weight = db.weight;
 // console.log(Weight);
 const Users =db.Users;
 const { IMC, evoLostOrWin, remnant } = require('../utils/calculate');
-
+const { getFirstMeasureDate, getDaysSinceFirstMeasure, getMeasuresCount, getMaxWeight, getMinWeight, getDiffLast7Days, getDiffLast30Days, getAveragePerWeek, getAveragePerMonth } = require('../utils/weightStats');
 
 ////////////////////////////////////////////////////////
 //////////////// INSERTION DU POIDS ////////////////////
@@ -105,7 +105,7 @@ exports.weightList = async (req, res) => {
 
         // ajouter les calculs de l'utils
 
-        let lastWeight;
+        let lastWeight = null;
 
         const enrichList = weightsList.map((record) => {
             const currentWeight = Number(record.weight);
@@ -116,6 +116,7 @@ exports.weightList = async (req, res) => {
             }
             // IMC
             const imcData = IMC(currentWeight, user.height);
+
             // reste à perdre
             let restToGoal;
             if (user.goal) {
@@ -136,11 +137,63 @@ exports.weightList = async (req, res) => {
 
         enrichList.reverse();
 
+        /////////// les stats pour le tableaux de bord ///////////
+
+        const statsSource = weightsList.map((w) => ({
+            weight: Number(w.weight),
+            created_at: w.created_at
+        }));
+
+        // première / dernière mesure
+        let firstWeight = null;
+        let currentWeight = null;
+        let firstImc = null;
+        let currentImc = null;
+        let goalImc = null;
+
+        if (weightsList.length > 0) {
+            const firstRecord = weightsList[0];                       // plus ancien
+            const lastRecord  = weightsList[weightsList.length - 1];  // plus récent
+
+            firstWeight   = Number(firstRecord.weight);
+            currentWeight = Number(lastRecord.weight);
+
+            if (user.height) {
+                firstImc   = IMC(firstWeight, user.height);
+                currentImc = IMC(currentWeight, user.height);
+                if (user.goal) {
+                goalImc = IMC(Number(user.goal), user.height);
+                }
+            }
+        }
+
+        // Récuperation des calculs des stats (fonctions)
+
+        const stats = {
+            firstMeasureDate: getFirstMeasureDate(statsSource),
+            daysSinceStart: getDaysSinceFirstMeasure(statsSource),
+            measuresCount: getMeasuresCount(statsSource),
+            maxWeight: getMaxWeight(statsSource),
+            minWeight: getMinWeight(statsSource),
+            diff7Days: getDiffLast7Days(statsSource),
+            diff30Days: getDiffLast30Days(statsSource),
+            avgPerWeek: getAveragePerWeek(statsSource),
+            avgPerMonth: getAveragePerMonth(statsSource),
+            firstWeight,
+            currentWeight,
+            goalWeight: user.goal ? Number(user.goal) : null,
+            firstImc,
+            currentImc,
+            goalImc
+        };
+
         res.status(200).json({
             success: true,
             message: 'liste des enregistrations',
-            data: enrichList
+            data: enrichList,
+            stats: stats
         })
+        
     } catch (error) {
         console.error('erreur sur la getWeight:', error);
         res.status(500).json({
