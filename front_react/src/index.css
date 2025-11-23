@@ -19,3 +19,7 @@ button {
     background: none;
     cursor: pointer;  
 }
+
+img {
+    width: 100%;
+}

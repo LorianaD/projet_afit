@@ -1,4 +1,5 @@
 import { Link, useNavigate } from "react-router"
+import logo from '../../img/logo.png'
 
 function Header() {
   const navigate = useNavigate();
@@ -19,7 +20,7 @@ function Header() {
 
   return (
     <><header>
-        <h1><Link to="/">VitaTrack</Link></h1>
+        <h1><Link to="/"><img src={ logo } alt="" className="header-logo" /></Link></h1>
         <nav>
           <ul>
               <li><Link to="/">Accueil</Link></li>

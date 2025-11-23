@@ -12,15 +12,20 @@ main {
 
 header {
     background-color: rgba(90, 211, 199, 1);
-    padding: 20px;
+    /* padding: 20px; */
     display: flex;
     justify-content: space-between;
+}
+
+.header-logo {
+    width: 100px;
+    margin: 10px;
 }
 
 nav {
     display: flex;
     align-items: center;
-    /* height: 100%; */
+    margin: 0 50px;
 }
 
 nav>ul {
