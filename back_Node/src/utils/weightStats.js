@@ -49,8 +49,7 @@ function getMinWeight(weights) {
     return Math.min(...values);
 }
 
-// Différence de poids sur les nbDays derniers jours
-// > 0 = pris du poids, < 0 = perdu du poids
+// Différence de poids sur les nb de jours
 function getDiffLastDays(weights, nbDays) {
     if (!weights || weights.length < 2) return null;
 

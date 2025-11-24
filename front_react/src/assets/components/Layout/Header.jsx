@@ -19,19 +19,20 @@ function Header() {
   }
 
   return (
-    <><header>
+    <>
+      <header>
         <h1><Link to="/"><img src={ logo } alt="" className="header-logo" /></Link></h1>
         <nav>
           <ul>
-              <li><Link to="/">Accueil</Link></li>
+              <li className="nav-link-box"><Link to="/" className="nav-link">Accueil</Link></li>
               { isLogged ? (
                 <>
-                  <li><Link to="/dashboard">Mon compte</Link></li>
-                  <li><button onClick={handleLogout}>Se déconnecter</button></li>
+                  <li className="nav-link-box"><Link to="/dashboard" className="nav-link">Mon compte</Link></li>
+                  <li className="nav-link-box"><button onClick={handleLogout} className="nav-link">Se déconnecter</button></li>
                 </>
               ) : (
                 <>
-                  <li><Link to="/login">Se connecter</Link></li>
+                  <li className="nav-link-box"><Link to="/login" className="nav-link">Se connecter</Link></li>
                 </>
               )}
           </ul>

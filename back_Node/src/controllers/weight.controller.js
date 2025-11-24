@@ -2,7 +2,7 @@ const db = require('../models');
 // console.log(db);
 const Weight = db.weight;
 // console.log(Weight);
-const Users =db.Users;
+const Users = db.Users;
 const { IMC, evoLostOrWin, remnant } = require('../utils/calculate');
 const { getFirstMeasureDate, getDaysSinceFirstMeasure, getMeasuresCount, getMaxWeight, getMinWeight, getDiffLast7Days, getDiffLast30Days, getAveragePerWeek, getAveragePerMonth } = require('../utils/weightStats');
 
@@ -144,16 +144,16 @@ exports.weightList = async (req, res) => {
             created_at: w.created_at
         }));
 
-        // première / dernière mesure
-        let firstWeight = null;
+        // première mesure / la mesure actuelle / Objectif
+        let firstWeight   = null;
         let currentWeight = null;
-        let firstImc = null;
-        let currentImc = null;
-        let goalImc = null;
+        let firstImc      = null;
+        let currentImc    = null;
+        let goalImc       = null;
 
         if (weightsList.length > 0) {
-            const firstRecord = weightsList[0];                       // plus ancien
-            const lastRecord  = weightsList[weightsList.length - 1];  // plus récent
+            const firstRecord = weightsList[0];
+            const lastRecord  = weightsList[weightsList.length - 1];
 
             firstWeight   = Number(firstRecord.weight);
             currentWeight = Number(lastRecord.weight);
@@ -162,7 +162,7 @@ exports.weightList = async (req, res) => {
                 firstImc   = IMC(firstWeight, user.height);
                 currentImc = IMC(currentWeight, user.height);
                 if (user.goal) {
-                goalImc = IMC(Number(user.goal), user.height);
+                    goalImc = IMC(Number(user.goal), user.height);
                 }
             }
         }

@@ -81,7 +81,7 @@ function Dashboard() {
         <div className="dashboard-nav">
           <Link to="/newweight" className="dashboard-link">
             <div className="dashboard-link-icon">
-              <img src={ pesee } alt="ajouter une pesée" title="Ajouter une pesée" className="dashboard-link-img"/>
+              <img src={ pesee } alt="ajouter une pesée" title="Nouvelle pesée" className="dashboard-link-img"/>
             </div>
             <span className="dashboard-link-label">Nouvelle pesée</span>
           </Link>
@@ -93,9 +93,9 @@ function Dashboard() {
           </Link>
           <Link to="/profile" className="dashboard-link">
             <div className="dashboard-link-icon">
-              <img src={ userProfile } alt="Historique" title="Mon profile" className="dashboard-link-img"/>
+              <img src={ userProfile } alt="Profil" title="Profil" className="dashboard-link-img"/>
             </div>
-            <span className="dashboard-link-label">Profile</span>
+            <span className="dashboard-link-label">Profil</span>
           </Link>          
         </div>
       </section>
@@ -197,6 +197,75 @@ function Dashboard() {
                   )}
                 </div>
               </div>
+
+              {/* Stats divers */}
+              <div className="lastWeight-card">
+                <h4 className="card-title">Mes statistiques</h4>
+
+                <div className="lastWeight-intem">
+                  <h5 className="lastWeight-intem-title">Jours passéés depuis la premiére pesée</h5>
+                  <span className="lastWeight-intem-data">
+                    {stats.daysSinceStart != null ? `${stats.daysSinceStart} jours` : "-"}
+                  </span>
+                </div>
+
+                <div className="lastWeight-intem">
+                  <h5 className="lastWeight-intem-title">Le nombre de pesées</h5>
+                  <span>
+                    {stats.measuresCount != null ? `${stats.measuresCount}` : "-"}
+                  </span>
+                </div>
+
+                <div className="lastWeight-intem">
+                  <h5 className="lastWeight-intem-title">Poids le plus élevé</h5>
+                  <span>
+                    {stats.maxWeight != null ? `${stats.maxWeight} kg` : "-"}
+                  </span>
+                </div>
+
+                <div className="lastWeight-intem">
+                  <h5 className="lastWeight-intem-title">Poids le plus bas</h5>
+                  <span>
+                    {stats.minWeight != null ? `${stats.minWeight} kg` : "-"}
+                  </span>
+                </div>
+
+              </div>
+
+              {/* Stats divers suite */}
+              <div className="lastWeight-card">
+                <h4 className="card-title">Mes statistiques</h4>
+
+                <div className="lastWeight-intem">
+                  <h5 className="lastWeight-intem-title">Evolution de la prise ou perte de poids sur les 7 dérnier jours</h5>
+                  <span className="lastWeight-intem-data">
+                    {stats.diff7Days != null ? `${stats.diff7Days} kg` : "-"}
+                  </span>
+                </div>
+
+                <div className="lastWeight-intem">
+                  <h5 className="lastWeight-intem-title">Evolution de la prise ou perte de poids sur les 30 dérnier jours</h5>
+                  <span>
+                    {stats.diff30Days != null ? `${stats.diff30Days} kg` : "-"}
+                  </span>
+                </div>
+
+                {/* <div className="lastWeight-intem">
+                  <h5 className="lastWeight-intem-title">Moyenne par semaine</h5>
+                  <span>
+                    {stats.avgPerWeek != null ? `${stats.avgPerWeek}` : "-"}
+                  </span>
+                </div> */}
+
+                {/* <div className="lastWeight-intem">
+                  <h5 className="lastWeight-intem-title">Moyenne par mois</h5>
+                  <span>
+                    {stats.avgPerMonth != null ? `${stats.avgPerMonth}` : "-"}
+                  </span>
+                </div> */}
+
+              </div>
+
             </div>
           )}
           {!stats && !error && (
@@ -216,7 +285,7 @@ function Dashboard() {
                   </div>
                   <div className="lastWeight-intem">
                       <h5 className="lastWeight-intem-title">Perte totale</h5>
-                      <span className="lastWeight-intem-data">{w.evolution === null || w.evolution === undefined ? "—" : `${w.evolution > 0 ? "+" : ""}${w.evolution} kg`}</span>                        
+                      <span className="lastWeight-intem-data">{w.evolution === null || w.evolution === undefined ? "—" : `${w.evolution > 0 ? "-" : ""}${w.evolution} kg`}</span>                        
                   </div>
                   <div className="lastWeight-intem">
                       <h5 className="lastWeight-intem-title">IMC</h5>
