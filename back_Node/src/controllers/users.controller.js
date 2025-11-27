@@ -1,3 +1,5 @@
+const db = require('../models');
+const Users = db.Users;
 const { getAge } = require('../utils/calculate');
 const { getFirstMeasureDate } = require('../utils/weightStats');
 
@@ -7,8 +9,9 @@ exports.userProfile = async (req, res) => {
     try {
         
         // on recupére le id du user
-        // const userId = req.user?.id || req.user?.sub;
+        // const userId = req.Users?.id || req.Users?.sub;
         // console.log(userId);
+        
 
         // if (!userId) {
         //     return res.status(401).json({
@@ -18,9 +21,9 @@ exports.userProfile = async (req, res) => {
         //     })
         // }
 
-        // on recupére les infos de l'utilisateur, height et goal
-        // const user = await Users.findByPk(userId);
-        // console.log(user);
+        // on recupére les infos de l'utilisateur
+        const user = await Users.findByPk();
+        console.log(user);
         
         // if (!user) {
         //     return res.status(404).json({
@@ -37,12 +40,12 @@ exports.userProfile = async (req, res) => {
         // })        
 
     } catch (error) {
-        // console.error('erreur sur la getWeight:', error);
-        // res.status(500).json({
-        //     success: false,
-        //     message: 'erreur sur la getWeights',
-        //     data: null
-        // })        
+        console.error('erreur sur la getWeight:', error);
+        res.status(500).json({
+            success: false,
+            message: 'erreur sur la getWeights',
+            data: null
+        })        
     }
 }
 
