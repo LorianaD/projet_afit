@@ -7,10 +7,10 @@ import Home from "./assets/components/Home";
 import Login from "./assets/components/Auth/Login";
 import Register from "./assets/components/Auth/Register";
 import MainLayout from "./assets/components/Layout/MainLayout";
-import Dashboard from "./assets/components/User/Dashboard";
-import AddWeight from "./assets/components/User/AddWeight";
-import WeightsList from "./assets/components/User/WeightsList";
-import ProfilePage from "./assets/components/User/ProfilePage";
+import Dashboard from "./assets/components/user/Dashboard";
+import AddWeight from "./assets/components/user/AddWeight";
+import WeightsList from "./assets/components/user/WeightsList";
+import ProfilePage from "./assets/components/user/ProfilePage";
 
 function App() {
 
