@@ -1,0 +1,16 @@
+.home-page {
+    display: flex;
+    flex-direction: column;
+}
+
+.home-page .section + .section {
+    margin-top: 2rem;
+}
+
+.home-discover {
+    background-color: #fcfcfc;
+}
+
+.home-methods {
+    background-color: #f7f7f7;
+}

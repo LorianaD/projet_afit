@@ -1,0 +1,34 @@
+.cards-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.cards-grid .info-card {
+    flex: 0 0 calc((100% - 3rem) / 3);
+}
+
+/* =======================================================================
+========================== RESPONSIVE ====================================
+======================================================================= */
+
+@media (max-width: 1024px) {
+    .cards-grid .info-card {
+        flex: 0 0 calc((100% - 1.5rem) / 2);
+    }
+
+    .cards-grid .info-card {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 640px) {
+    .cards-grid {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+}

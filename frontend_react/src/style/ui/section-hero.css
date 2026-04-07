@@ -1,0 +1,128 @@
+.section-hero {
+    position: relative;
+    display: flex;
+    width: 100%;
+    min-height: 460px;
+    padding: 50px;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+.section-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.45);
+    z-index: 1;
+}
+
+.section-hero__content {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    width: 100%;
+    min-height: 100%;
+}
+
+.section-hero__badge {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+
+    background-color: #ffffffbb;
+    border-radius: 16px;
+    padding: 8px 10px;
+}
+
+.section-hero__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+
+    max-width: 760px;
+    margin-top: auto;
+    padding-top: 80px;
+}
+
+.section-hero__title {
+    margin: 0;
+    font-size: 58px;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+.section-hero__description {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 680px;
+}
+
+.section-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+/* =======================================================================
+========================== RESPONSIVE ====================================
+======================================================================= */
+
+@media (max-width: 900px) {
+    .section-hero {
+        min-height: 400px;
+        padding: 30px 24px;
+        background-position: center;
+    }
+
+    .section-hero__text {
+        max-width: 100%;
+        padding-top: 50px;
+    }
+
+    .section-hero__title {
+        font-size: 42px;
+    }
+
+    .section-hero__description {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .section-hero {
+        min-height: 360px;
+        padding: 24px 16px;
+    }
+
+    .section-hero__text {
+        gap: 16px;
+        padding-top: 40px;
+    }
+
+    .section-hero__title {
+        font-size: 32px;
+    }
+
+    .section-hero__description {
+        font-size: 15px;
+    }
+
+    .section-hero__actions {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .section-hero__actions * {
+        width: 100%;
+    }
+}

@@ -1,5 +1,4 @@
-import React from "react";
-import { Chart as ChartJS, LineElement,PointElement, LinearScale, CategoryScale, Tooltip, Legend} from "chart.js";
+import { Chart as ChartJS, LineElement, PointElement, LinearScale, CategoryScale, Tooltip, Legend} from "chart.js";
 import { Line } from "react-chartjs-2";
 
 // Enregistrer les éléments

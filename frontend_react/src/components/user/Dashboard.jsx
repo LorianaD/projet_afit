@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link, Navigate } from "react-router";
-import pesee from "../../img/pesee.png";
-import weightstory from "../../img/weightStory.png";
-import EvoChart from "./Charts/EvolutionChart";
-import userProfile from "../../img/userFemale.png";
+import pesee from "../../assets/img/pesee.png";
+import weightstory from "../../assets/img/weightStory.png";
+import EvoChart from "./Charts/EvolutionChart.jsx";
+import userProfile from "../../assets/img/userFemale.png";
 
 function Dashboard() {
 

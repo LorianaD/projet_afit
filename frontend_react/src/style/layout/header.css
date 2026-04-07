@@ -1,0 +1,44 @@
+/*************************************************************************
+**************************** HEADER **************************************
+*************************************************************************/
+
+.header {
+    background-color: #cef2ef;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-logo__img {
+    width: 100px;
+}
+
+.header-navbar__contenair {
+    display: flex;
+    align-items: center;
+}
+
+.header-navbar__contents {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-link-box {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.nav-link {
+    color: rgba(26, 42, 58, 1);
+    font-size: 16px;
+}
+
+/* =======================================================================
+========================== RESPONSIVE ====================================
+======================================================================= */
+
+@media (max-width: 900px) {
+    .header-navbar__contents {
+        display: none;
+    }
+}

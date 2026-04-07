@@ -1,0 +1,13 @@
+.btn {
+    border-radius: 16px;
+    padding: 8px 10px;
+    color: #003366;    
+}
+
+.btn-primary {
+    background-color: #cef2ef;
+}
+
+.btn-secondary {
+    background-color: #e3eeed;
+}

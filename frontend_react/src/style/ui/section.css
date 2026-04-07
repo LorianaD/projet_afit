@@ -1,0 +1,16 @@
+/****************************
+***** Section Container *****
+****************************/
+
+.section {
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.section--default {
+    background-color: transparent;
+}

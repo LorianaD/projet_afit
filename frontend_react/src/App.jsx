@@ -1,16 +1,13 @@
 import { Routes, Route } from "react-router";
-import './App.css'
-import './assets/style/Auth.css'
-import './assets/style/User.css'
-import './assets/style/Layout.css'
-import Home from "./assets/components/Home";
-import Login from "./assets/components/Auth/Login";
-import Register from "./assets/components/Auth/Register";
-import MainLayout from "./assets/components/Layout/MainLayout";
-import Dashboard from "./assets/components/user/Dashboard";
-import AddWeight from "./assets/components/user/AddWeight";
-import WeightsList from "./assets/components/user/WeightsList";
-import ProfilePage from "./assets/components/user/ProfilePage";
+import './style/index.css'
+import Home from "./pages/Home.jsx";
+import Login from "./components/Auth/Login";
+import Register from "./components/Auth/Register";
+import MainLayout from "./components/Layout/MainLayout";
+import Dashboard from "./components/user/Dashboard";
+import AddWeight from "./components/user/AddWeight";
+import WeightsList from "./components/user/WeightsList";
+import ProfilePage from "./components/user/ProfilePage";
 
 function App() {
 
