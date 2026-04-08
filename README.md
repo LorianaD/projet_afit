@@ -1,217 +1,218 @@
-# Afit (VitaTrack) – Suivi de poids intelligent
+# 🌿 VitaTrack – Plateforme bien-être & suivi intelligent
 
-> **“Suivez votre progression, vivez mieux.”**
+> **“Mieux manger, mieux comprendre, mieux progresser.”**
 
----
+[![React](https://img.shields.io/badge/Frontend-React-blue?logo=react)](#)
+[![Node.js](https://img.shields.io/badge/Backend-Node.js-green?logo=node.js)](#)
+[![Express](https://img.shields.io/badge/API-Express-black?logo=express)](#)
+[![MySQL](https://img.shields.io/badge/Database-MySQL-orange?logo=mysql)](#)
+[![Status](https://img.shields.io/badge/Status-En%20développement-yellow)](#)
+[![License](https://img.shields.io/badge/License-Personal-lightgrey)](#)
 
-## Description
-
-**Afit** est une application web de suivi de poids permettant aux utilisateurs de visualiser leur évolution dans le temps, d’analyser leurs données corporelles et de mieux comprendre leur progression.
-
-Ce projet constitue la première brique d’un écosystème plus large : **VitaTrack**, une plateforme de suivi santé personnalisée intégrant à terme des fonctionnalités d’intelligence artificielle.
-
----
-
-## Objectifs
-
-* Suivre son poids de manière simple et efficace
-* Visualiser son évolution grâce à des graphiques
-* Comprendre ses données (IMC, tendances, progression)
-* Aider à atteindre un objectif de poids
-* Proposer une base évolutive vers un accompagnement intelligent
+🔗 **Site live :** https://vitatrack.dianoholding.com/  
+🎯 **Portfolio :** https://loriana.dianoholding.com  
 
 ---
 
-## Stack technique
+## ✨ Vision
 
-* **Frontend** : React (Vite)
-* **Backend** : Node.js / Express
-* **Base de données** : MySQL
-* **Outils prévus** : graphiques dynamiques (Recharts / Chart.js)
+**VitaTrack** est une plateforme bien-être qui combine :
 
----
+- 📊 suivi de données corporelles  
+- 🧠 compréhension du corps  
+- 🥗 conseils nutritionnels accessibles  
+- 🤖 évolution vers une intelligence artificielle personnalisée  
 
-## Gestion utilisateur
-
-Chaque utilisateur possède un profil contenant :
-
-* Nom / Prénom
-* Pseudo
-* Email
-* Date de naissance
-* Taille
-* Sexe
-* Objectif de poids
+👉 L’objectif : **apprendre à mieux prendre soin de soi**, pas juste suivre un poids.
 
 ---
 
-## Données suivies
+## 🧩 Le projet aujourd’hui
 
-* Poids
-* Date de la mesure
-
----
-
-## Fonctionnalités
-
-### Fonctionnalités actuelles / en cours
-
-* Enregistrement du poids
-* Date de première mesure
-* Nombre de jours depuis le début
-* Poids minimum / maximum
-* Calcul de l’IMC (sous-poids / normal / surpoids)
-* Courbe d’évolution du poids
+Initialement conçu comme une app de suivi de poids (**Afit**), le projet évolue vers une **plateforme complète orientée pédagogie et autonomie utilisateur**.
 
 ---
 
-### Fonctionnalités en développement
+## 🚀 Fonctionnalités
 
-* Nombre total de mesures
-* Évolution sur 7 jours / 30 jours
-* Moyenne hebdomadaire / mensuelle
-* Calcul automatique de progression
+### ✅ Actuelles
 
----
-
-### Fonctionnalités avancées (à venir)
-
-* Objectif de poids avec estimation du temps restant
-* Analyse intelligente des données
-* Suggestions personnalisées
+- Suivi du poids dans le temps
+- Calcul de l’IMC
+- Statistiques :
+  - poids min / max
+  - nombre de jours de suivi
+- Visualisation graphique 📈
 
 ---
 
-## Évolution prévue (VitaTrack)
+### 🔄 En cours
 
-### Page d’accueil
-
-* Présentation du concept
-* Accès aux fonctionnalités principales
-* Expérience utilisateur orientée bien-être
+- Évolution sur 7 / 30 jours
+- Moyennes hebdomadaires et mensuelles
+- Calcul automatique de progression
 
 ---
 
-### Conseils personnalisés
+### 🔮 À venir (VitaTrack)
 
-* Recommandations basées sur les données utilisateur
-* Conseils d’hygiène de vie
-* Contenu pédagogique
+#### 🥗 Conseils & contenu
 
----
+- Nutrition (IG bas, équilibre alimentaire)
+- Habitudes de vie
+- Compréhension du corps
+- Produits de saison
+- Recettes
 
-### Intelligence Artificielle
+#### 🤖 Intelligence artificielle
 
-#### Génération de menus personnalisés
+- Génération de menus personnalisés
+- Adaptation aux :
+  - intolérances
+  - régimes
+  - objectifs
+- Analyse des données utilisateur
 
-* Adaptés aux intolérances alimentaires
-* Compatibles avec différents régimes
-* Basés sur les objectifs (perte / prise de poids)
-* Personnalisés selon les préférences
+#### ⚠️ Approche responsable
 
-#### Analyse des données
-
-* Détection de tendances
-* Suggestions adaptées à l’évolution
-
-#### Approche responsable
-
-* Aucun autodiagnostic
-* Orientation vers des professionnels si nécessaire
-* Accompagnement pédagogique
+- ❌ Pas d’autodiagnostic
+- ✅ Orientation vers des professionnels
+- 🎓 Contenu pédagogique
 
 ---
 
-## Structure de la base de données
+## 🧱 Stack technique
 
-### Table `users`
+| Frontend | Backend | Base de données | Autres |
+|----------|--------|----------------|--------|
+| React (Vite) | Node.js / Express | MySQL | Chart.js / Recharts |
 
-```sql
-name: string
-firstname: string
-username: string
-email: string
-birthday: date
-height: integer
-gender: string
-goal: decimal
+---
+
+## 👤 Gestion utilisateur
+
+Chaque utilisateur possède :
+
+- Nom / Prénom
+- Pseudo
+- Email
+- Date de naissance
+- Taille
+- Sexe
+- Objectif de poids
+
+---
+
+## 📊 Données suivies
+
+- Poids
+- Date de mesure
+
+💡 À terme :  
+→ composition corporelle (masse grasse, muscle…)  
+→ analyse avancée (inspiré des balances impédancemètres :contentReference[oaicite:0]{index=0})
+
+---
+
+## 🧠 Approche nutritionnelle
+
+Le projet s’appuie sur des bases simples :
+
+- Structure des repas équilibrés :contentReference[oaicite:1]{index=1}  
+- Alimentation à IG bas privilégiée :contentReference[oaicite:2]{index=2}  
+- Stabilisation durable après régime :contentReference[oaicite:3]{index=3}  
+
+👉 Objectif : **rendre la nutrition compréhensible et applicable au quotidien**
+
+---
+
+## 🎨 Design & UX
+
+### 🎯 Direction artistique
+
+- Univers **bien-être / santé / apaisant**
+- Interface **claire et pédagogique**
+- Lecture rapide (important recruteurs 👀)
+
+### 🎨 Palette
+
+```css
+Primary : #9EE0C1 (vert menthe)
+Secondary : #6FB3CE (bleu doux)
+Background : #F6F4EF (beige clair)
+Text : #2E2E2E (anthracite)
+````
+
+---
+
+## 📁 Architecture (simplifiée)
+
+```
+frontend/
+ ├── components/
+ ├── pages/
+ ├── services/
+ └── assets/
+
+backend/
+ ├── controllers/
+ ├── routes/
+ ├── services/
+ └── config/
 ```
 
 ---
 
-## Design & UI
+## 📈 État du projet
 
-### Palette moderne (bien-être)
+🚧 Projet en développement actif
 
-* Vert menthe : `#9EE0C1`
-* Bleu doux : `#6FB3CE`
-* Beige clair : `#F6F4EF`
-* Anthracite : `#2E2E2E`
-
-### Palette minimaliste (professionnelle)
-
-* Bleu nuit : `rgba(26, 42, 58, 1)`
-* Turquoise : `rgba(90, 211, 199, 1)`
-* Gris clair : `#EDEDED`
-* Blanc : `#FFFFFF`
+✔️ Base fonctionnelle
+✔️ Vision produit définie
+🔄 Transformation en plateforme complète
 
 ---
 
-### Typographies
+## 🎯 Objectif long terme
 
-* **Montserrat** → moderne
-* **Poppins** → lisible
-* **Inter** → idéal pour les données
-* **Nunito** → style bien-être
-
----
-
-## État du projet
-
-Projet actuellement en cours de développement.
-
-Ce repository présente une première version fonctionnelle axée sur le suivi du poids, avec une vision d’évolution vers une plateforme santé plus complète.
-
----
-
-## Vision long terme
-
-**VitaTrack** vise à devenir une plateforme capable de :
+Créer une plateforme capable de :
 
 * Générer des menus personnalisés
-* Prendre en compte les intolérances alimentaires
-* Offrir un suivi santé intelligent
-* Accompagner les utilisateurs de manière pédagogique
+* Centraliser les connaissances nutritionnelles
+* Offrir un accompagnement intelligent
+* Aider sans remplacer un professionnel
 
 ---
 
-## Disclaimer
+## ⚠️ Disclaimer
 
 Ce projet ne remplace pas un avis médical.
-Il a pour objectif d’accompagner les utilisateurs, pas de diagnostiquer.
+Il vise à **accompagner et informer**, pas à diagnostiquer.
 
 ---
 
-## Auteur
+## 👩‍💻 Auteur
 
 **Loriana Diano**
 Développeuse Web & Web Mobile
 
-Portfolio : https://loriana.dianoholding.com
-LinkedIn : https://www.linkedin.com/in/loriana-diano-33187ba8/
+🔗 Portfolio : [https://loriana.dianoholding.com](https://loriana.dianoholding.com)
+🔗 LinkedIn : [https://www.linkedin.com/in/loriana-diano-33187ba8/](https://www.linkedin.com/in/loriana-diano-33187ba8/)
 
 ---
 
-## Pourquoi ce projet
+## 💡 Pourquoi ce projet ?
 
-Ce projet illustre :
+Ce projet démontre :
 
-* Une logique métier concrète
-* La manipulation de données utilisateur
-* La visualisation de données
-* Une réflexion produit complète
-* Une base évolutive vers l’intelligence artificielle
+* Architecture fullstack (React / Node / MySQL)
+* Gestion de données utilisateur
+* Visualisation de données
+* Réflexion produit complète
+* Vision évolutive vers l’IA
 
 ---
 
-💙 *Merci pour votre visite !*
+## 💙 Merci pour votre visite
+
+Si le projet vous intéresse, n’hésitez pas à explorer ou à me contacter 🙌
