@@ -2,6 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
+    justify-content: flex-start;
 }
 
 .cards-grid .info-card {
@@ -13,22 +14,22 @@
 ======================================================================= */
 
 @media (max-width: 1024px) {
+
     .cards-grid .info-card {
         flex: 0 0 calc((100% - 1.5rem) / 2);
     }
-
-    .cards-grid .info-card {
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-
+    
 }
 
-@media (max-width: 640px) {
+@media (max-width: 600px) {
+
     .cards-grid {
-        width: 100%;
         justify-content: center;
         align-items: center;
     }
+
+    .cards-grid .info-card {
+        flex: 0 0 calc((100% - 1.5rem) / 1);
+    }
+
 }

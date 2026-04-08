@@ -4,6 +4,15 @@ import meal2 from "../assets/img/meal2.png";
 import bodyMeasure from "../assets/img/bodyMeasure.png";
 import meal3 from "../assets/img/meal3.jpg";
 import protein from "../assets/img/protein.jpg";
+import bodyMeasure2 from "../assets/img/bodyMeasure2.png";
+import mistakes from "../assets/img/commonMistakes.png";
+import bodyData from "../assets/img/bodyData.png";
+import muscles from "../assets/img/muscles.png";
+import morphology from "../assets/img/morphology.png";
+import weightGainType from "../assets/img/weightGainType.png";
+import seasonalFruits from "../assets/img/seasonalFruits.png";
+import seasonalProducts from "../assets/img/seasonalProducts.png";
+import traditions from "../assets/img/traditions.png";
 
 const hero = {
     title : "Mieux manger, mieux comprendre, mieux progresser",
@@ -76,7 +85,7 @@ const methods = {
             description : "Comprendre quoi observer au-delà du simple poids.",
             cta : "Voir le guide",
             link : "/guides/progress",
-            img : "",
+            img : bodyMeasure2,
         },
         {
             id : "common-mistakes",
@@ -84,7 +93,7 @@ const methods = {
             description : "Repérer les excès, restrictions trop fortes et habitudes contre-productives.",
             cta : "Voir le guide",
             link : "/guides/errors",
-            img : "",
+            img : mistakes,
         },
     ],
 };
@@ -102,7 +111,7 @@ const bodyUnderstanding = {
             description : "Poids, masse grasse, masse musculaire, hydratation et mensurations.",
             cta : "Comprendre",
             link : "/body/data",
-            img : "",
+            img : bodyData,
         },
         {
             id : "muscles",
@@ -110,7 +119,7 @@ const bodyUnderstanding = {
             description : "Groupes musculaires, contraction, décontraction et ressenti musculaire.",
             cta : "Comprendre",
             link : "/body/muscles",
-            img : "",
+            img : muscles,
         },
         {
             id : "morphology",
@@ -118,7 +127,7 @@ const bodyUnderstanding = {
             description : "Silhouette, répartition des masses et zones de stockage.",
             cta : "Comprendre",
             link : "/body/morphology",
-            img : "",
+            img : morphology,
         },
         {
             id : "weight-gain-types",
@@ -126,7 +135,7 @@ const bodyUnderstanding = {
             description : "Mieux distinguer stockage, rétention, variations et progression réelle.",
             cta : "Comprendre",
             link : "/body/weight-gain",
-            img : "",
+            img : weightGainType,
         },
     ]
 }
@@ -144,7 +153,7 @@ const seasonsAndTraditions = {
             description : "Mieux choisir selon les périodes.",
             cta : "Découvrir",
             link : "/seasons/fruit-and-vegetables",
-            img : "",
+            img : seasonalFruits,
         },
         {
             id : "seasonal-products",
@@ -152,7 +161,7 @@ const seasonsAndTraditions = {
             description : "Des repères utiles pour varier ses choix.",
             cta : "Découvrir",
             link : "/seasons/products",
-            img : "",
+            img : seasonalProducts,
         },
         {
             id : "traditions",
@@ -160,7 +169,7 @@ const seasonsAndTraditions = {
             description : "Découvrir des habitudes alimentaires liées aux cultures et aux saisons.",
             cta : "Découvrir",
             link : "/traditions",
-            img : "",
+            img : traditions,
         },    
     ],
 }

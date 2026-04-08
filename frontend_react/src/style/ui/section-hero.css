@@ -5,7 +5,6 @@
     min-height: 460px;
     padding: 50px;
     overflow: hidden;
-    box-sizing: border-box;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: right center;
@@ -50,17 +49,18 @@
     max-width: 760px;
     margin-top: auto;
     padding-top: 80px;
+
+    color: var(--color-text-light);
 }
 
 .section-hero__title {
-    margin: 0;
     font-size: 58px;
     line-height: 1.1;
     font-weight: 700;
+    font-family: var(--font-primary);
 }
 
 .section-hero__description {
-    margin: 0;
     font-size: 18px;
     line-height: 1.6;
     max-width: 680px;
@@ -76,10 +76,10 @@
 ========================== RESPONSIVE ====================================
 ======================================================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
     .section-hero {
         min-height: 400px;
-        padding: 30px 24px;
+        padding: 30px;
         background-position: center;
     }
 
@@ -94,6 +94,11 @@
 
     .section-hero__description {
         font-size: 16px;
+    }
+
+    .section-hero__actions {
+        align-items: center;
+        justify-content: center;
     }
 }
 
@@ -116,13 +121,4 @@
         font-size: 15px;
     }
 
-    .section-hero__actions {
-        flex-direction: column;
-        align-items: stretch;
-        width: 100%;
-    }
-
-    .section-hero__actions * {
-        width: 100%;
-    }
 }

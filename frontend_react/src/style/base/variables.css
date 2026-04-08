@@ -1,0 +1,64 @@
+:root {
+  /* ***********************************
+    TYPOGRAPHIE
+  *********************************** */
+  --font-primary: "Montserrat", Arial, sans-serif;
+  --font-secondary: "Nunito", sans-serif;
+
+    /* Montserrat → moderne */
+    /* Poppins → lisible */
+    /* Inter → idéal pour les données */
+    /* Nunito → style bien-être */
+
+  /* ***********************************
+    COULEURS
+  *********************************** */
+  --color-primary: #9EE0C1;
+
+  --color-text-light: #1A2A3A;
+  --color-text-dark: #F6F4EF;
+
+  --color-title-light: #1A2A3A;
+  --color-description-light: #555555;
+  --color-link-light: #1A2A3A;
+
+  --color-title-dark: #F6F4EF;
+  --color-description-dark: #b5b5b5;
+  --color-link-dark: #F6F4EF;
+
+  --background-light: #FFFFFF;
+  --background-dark: #2E2E2E;
+
+  --color-success: #4CAF50;
+  --color-error: #D32F2F;
+
+  /* ***********************************
+    RADIUS
+  *********************************** */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+
+  /* ***********************************
+    SHADOW
+  *********************************** */  
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+
+  /* ***********************************
+    SPACING
+  *********************************** */ 
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+
+  /* ***********************************
+    BREAKPOINTS
+  *********************************** */
+  --bp-mobile: 480px;
+  --bp-tablet: 768px;
+  --bp-desktop: 1024px;
+  
+}

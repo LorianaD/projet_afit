@@ -43,8 +43,7 @@
 .info-card__description {
     font-size: 1rem;
     line-height: 1.6;
-    color: #555;
-    margin: 0;
+    color: var(--color-description-light);
 }
 
 .info-card__link {
@@ -53,5 +52,18 @@
     margin-top: auto;
     text-decoration: none;
     font-weight: 600;
-    color: #036;
+    color: var(--color-link-light);
+}
+
+@media (prefers-color-scheme: dark) {
+    .info-card {
+        border: 1px solid #e5e5e5;
+        background-color: #ffffff12;
+    }
+    .info-card__description {
+        color: var(--color-description-dark);
+    }
+    .info-card__link {
+        color: var(--color-link-dark);
+    }
 }

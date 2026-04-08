@@ -14,3 +14,18 @@
 .section--default {
     background-color: transparent;
 }
+
+/***************************
+******   RESPONSIVE   ******
+***************************/
+
+@media (max-width: 1024px) {
+    .section {
+        padding: 26px;
+        gap: 26px;
+    }
+}
+
+@media (max-width: 600px) {
+
+}

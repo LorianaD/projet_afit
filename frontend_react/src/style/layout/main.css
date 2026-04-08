@@ -1,23 +1,40 @@
 .main {
     min-height: 100vh;
     width: 100%;
-    background-color: #2f2f31;
+    background-color: var(--background-light);
+    color: var(--color-text-light);
 }
 
 .main__container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    background-color: #ffffff;
     min-height: 100vh;
+    background-color: #00000010;
 }
 
 /* =======================================================================
 ========================== RESPONSIVE ====================================
 ======================================================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
     .main {
-        width: 100%;
+        
     }
+
+    .main__container {
+        
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .main {
+        background-color: var(--background-dark);
+        color: var(--color-text-dark);
+    }
+
+    .main__container {
+        background-color: #ffffff10;
+    }
+    
 }
