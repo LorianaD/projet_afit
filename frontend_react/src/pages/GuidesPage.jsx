@@ -1,11 +1,12 @@
 import Building from "../components/Building";
-import Main from "../components/ui/Main";
+import { PrincipalePage } from "../components/GuidesPages";
 
 function GuidesPage() {
     return (
-        <Main>
-            <Building/>
-        </Main>
+        <>
+            <PrincipalePage/>        
+        </>
+
     )
 }
 

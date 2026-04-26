@@ -1,11 +1,11 @@
+import { PrincipalePage } from "../components/AdvicesPages";
 import Building from "../components/Building";
-import Main from "../components/ui/Main";
 
 function AdvicePage() {
     return (
-        <Main>
-            <Building/>
-        </Main>
+        <>
+            <PrincipalePage/>
+        </>
     )
 }
 

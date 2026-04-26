@@ -18,6 +18,7 @@
 @import "./ui/section-hero.css";
 @import "./ui/cards-grid.css";
 @import "./ui/info-card.css";
+@import "./ui/article-card.css";
 
 /* Pages */
 @import "./pages/home.css";

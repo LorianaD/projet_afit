@@ -1,7 +1,8 @@
 .btn {
     border-radius: 16px;
     padding: 8px 10px;
-    color: #003366;    
+    color: #003366;
+    width: fit-content;
 }
 
 .btn-primary {
