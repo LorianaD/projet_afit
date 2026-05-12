@@ -132,7 +132,7 @@ Le projet s’appuie sur des bases simples :
 
 - Univers **bien-être / santé / apaisant**
 - Interface **claire et pédagogique**
-- Lecture rapide (important recruteurs 👀)
+- Lecture rapide
 
 ### 🎨 Palette
 
