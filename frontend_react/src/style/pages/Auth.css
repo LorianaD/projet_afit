@@ -1,8 +1,7 @@
-form {
+.auth form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
     background-color: rgb(90, 211, 199);
     width: 40%;
     padding: 20px;
@@ -11,15 +10,15 @@ form {
     box-shadow: 2px 2px 2px 2px rgb(183, 183, 183);
 }
 
-.intem-box {
+.auth .intem-box {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     margin: 10px;
 }
 
-input,
-select {
+.auth input,
+.auth select {
     border: none;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.90);
@@ -28,7 +27,7 @@ select {
     box-shadow: 1px 1px 1px 1px rgb(183, 183, 183);
 }
 
-.btn-submit {
+.auth .btn-submit {
     width: 100px;
     margin: auto;
 }

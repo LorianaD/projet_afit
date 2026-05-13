@@ -1,26 +1,11 @@
 /* Base */
-@import "./base/reset.css";
-@import "./base/variables.css";
-@import "./base/base.css";
-@import "./base/typography.css";
+@import "./base/index.css";
 
 /* Layout */
-@import "./layout/main.css";
-@import "./layout/header.css";
-@import "./layout/footer.css";
-@import "./layout/mobileMenu.css";
+@import "./layout/index.css";
 
 /* Ui */
-@import "./ui/buttons.css";
-@import "./ui/badge.css";
-@import "./ui/section.css";
-@import "./ui/section-header.css";
-@import "./ui/section-hero.css";
-@import "./ui/cards-grid.css";
-@import "./ui/info-card.css";
-@import "./ui/article-card.css";
+@import "./ui/index.css";
 
 /* Pages */
-@import "./pages/home.css";
-@import "./pages/auth.css";
-@import "./pages/user.css";
+@import "./pages/index.css";

@@ -3,7 +3,7 @@ import Main from "../components/ui/Main";
 
 function BodyPage() {
     return (
-        <Main>
+        <Main variant="home">
             <Building/>
         </Main>
     )

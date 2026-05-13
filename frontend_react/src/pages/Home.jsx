@@ -9,7 +9,7 @@ import TrackingHome from "../components/Home/TrackingHome.jsx"
 function Home() {
 
   return (
-    <Main>
+    <Main variant="home">
       <HeroHome/>
       <DiscoverHome/>
       <MethodsHome/>

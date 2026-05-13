@@ -10,7 +10,7 @@ function PrincipalePage() {
     const articles = articlesSection.articles;
 
     return (
-        <Main>
+        <Main variant="home">
             <SectionHero title={hero.title} description={hero.description} badge={hero.badge}/>
             <SectionContainer>
                 <SectionHeader title={articlesSection.title}/>

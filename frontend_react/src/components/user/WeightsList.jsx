@@ -1,46 +1,19 @@
 import { useEffect, useState } from "react";
+import useWeights from "../../hooks/useWeights";
+import { Navigate } from "react-router";
+import SectionHeader from "../ui/SectionHeader";
+import SectionContainer from "../ui/SectionContainer";
+import WeightCard from "./WeightCard";
 
 function WeightsList() {
-
-    const [weights, setWeights] = useState([]);
-    const [error, setError] = useState("");
     
-    const getWeights = async () => {
+    const token = localStorage.getItem("token");
 
-        try {
+    const { weights, stats, error } = useWeights(token);
 
-            const token = localStorage.getItem("token");
-            // console.log(token);
-
-            const res = await fetch('http://localhost:3000/api/weight', {
-                headers: {
-                    "Content-Type": "application/json",
-                    Authorization: `Bearer ${token}`
-                }
-            });
-
-            const data = await res.json();
-            console.log(data);
-            
-
-            if (!res.ok) {
-                setError('Erreur lors du chargement');
-                setWeights([]);
-                return;
-            }
-
-            setWeights(data.data);
-
-        } catch (error) {
-            console.error("erreur:", error);
-            setError("Erreur serveur");
-        }
-
+    if (!token) {
+        return <Navigate to="/login" />;
     }
-
-    useEffect(() => {
-        getWeights();
-    }, []);
 
     const formatDate = (dateString) => {
         const date = new Date(dateString);
@@ -56,41 +29,22 @@ function WeightsList() {
     };
 
   return (
-    <>
-        <h2>Historique</h2>
-        <section className="weight-list">
-            { weights.map((w) => (
-                <div key={w.id} className="weight-card">
-                    <div className="weight-intem">
-                        <p>{formatDate(w.created_at)}</p>
-                    </div>
-                    <div className="weight-intem">
-                        <h3>Poids</h3>
-                        <span>{w.weight} kg</span>
-                    </div>
-                    <div className="weight-intem">
-                        <h3>Perte totale</h3>
-                        <span>{w.evolution === null || w.evolution === undefined ? "—" : `${w.evolution > 0 ? "+" : ""}${w.evolution} kg`}</span>                        
-                    </div>
-                    <div className="weight-intem">
-                        <h3>IMC</h3>
-                        {w.imc ? (
-                            <div className="weight-intem">
-                                <span>{w.imc.imc} </span>
-                                <span>{w.imc.category}</span>
-                            </div>
-                        ) : ( 
-                            <span>-</span>
-                        )}
-                    </div>
-                    <div className="weight-intem">
-                        <span>Encore</span>
-                        {w.restToGoal === null || w.restToGoal === undefined ? ( <span>-</span>) : (<span>{w.restToGoal} kg</span>)}
-                    </div>
-                </div>
+    <SectionContainer>
+        <SectionHeader title="Historique"/>
+        
+        <div className="weights-list">
+
+            {weights.map((weight) => (
+                <WeightCard
+                    key={weight.id}
+                    weight={weight}
+                    formatDate={formatDate}
+                />
             ))}
-        </section>
-    </>
+
+        </div>
+        
+    </SectionContainer>
   )
 }
 

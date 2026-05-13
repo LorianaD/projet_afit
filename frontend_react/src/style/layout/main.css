@@ -10,7 +10,22 @@
     max-width: 1200px;
     margin: 0 auto;
     min-height: 100vh;
-    background-color: #00000010;
+}
+
+/* HOME */
+
+.main--home .main__container {
+    background-color: #00000008;
+}
+
+/* Variante dashboard */
+.main--dashboard {
+    background: linear-gradient(180deg, #f7fbf9 0%, #eef5f2 100%);
+}
+
+.main--dashboard .main__container {
+    padding: 35px 28px 60px;
+    border-radius: 0 0 32px 32px;
 }
 
 /* =======================================================================
@@ -28,13 +43,14 @@
 }
 
 @media (prefers-color-scheme: dark) {
+
     .main {
         background-color: var(--background-dark);
         color: var(--color-text-dark);
     }
 
-    .main__container {
-        background-color: #ffffff10;
+    .main--home .main__container {
+        background-color: #ffffff08;
     }
-    
+
 }

@@ -1,6 +1,6 @@
-function Main({ children }) {
+function Main({ children, variant = "" }) {
     return (
-        <main className="main">
+        <main className={`main ${variant ? `main--${variant}` : ""}`}>
             <div className="main__container">
                 {children}
             </div>
