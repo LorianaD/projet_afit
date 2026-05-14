@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { loginUser } from "../services/authService";
+import loginUser from "../services/auth/loginService";
 
 function useLogin() {
     const [formData, setFormData] = useState({

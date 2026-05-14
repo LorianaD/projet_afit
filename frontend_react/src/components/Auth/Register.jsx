@@ -1,5 +1,8 @@
 import { useState } from "react"
-import { useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router";
+import FormLayout from "../ui/form/FormLayout";
+import FormField from "../ui/form/FormField";
+import SubmitButton from "../ui/form/SubmitButton";
 
 
 function Register() {
@@ -57,72 +60,129 @@ function Register() {
   }
 
   return (
-    <>
+    <FormLayout title="Inscrivez-vous afin de commencer l'aventure !" footer={
+      <span>
+        Vous êtes déjà inscrit ?{" "}
+        <Link to="/login">Connectez-vous</Link>
+      </span>
+    } >
 
-      <h2>Inscrivez-vous afin de commencer l'aventure !</h2>
-      
-      <form onSubmit={handleSubmit}>
+      <FormField
+        type="name"
+        name="name"
+        id="name"
+        label="Votre nom"
+        placeholder="ex. DU PONT"
+        value={formData.name}
+        onChange={handleChange}
+        required
+      />
 
-        <div className="intem-box">
-          <label htmlFor="name">Votre nom</label>
-          <input type="text" name="name" id="name" placeholder="ex. Du Pont" value={formData.name} onChange={handleChange}/>
-        </div>
+      <FormField
+        type="firstname"
+        name="firstname"
+        id="firstname"
+        label="Votre prénom"
+        placeholder="ex. Jean"
+        value={formData.firstname}
+        onChange={handleChange}
+        required
+      />
 
-        <div className="intem-box">
-          <label htmlFor="firstname">Votre prénom</label>
-          <input type="text" name="firstname" id="firstname" placeholder="ex. Jean" value={formData.firstname} onChange={handleChange}/>
-        </div>
+      <FormField 
+        type="username"
+        name="username"
+        id="username"
+        label="Votre pseudo"
+        placeholder="ex. JeanGym"
+        value={formData.username}
+        onChange={handleChange}
+        required        
+      />
 
-        <div className="intem-box">
-          <label htmlFor="username">Votre pseudo</label>
-          <input type="text" name="username" id="username" placeholder="ex. JeanGym" value={formData.username} onChange={handleChange}/>
-        </div>
+      <FormField
+        type="email"
+        name="email"
+        id="email"
+        label="Votre adresse e-mail"
+        placeholder="ex. Jean.dupont@example.com"
+        value={formData.email}
+        onChange={handleChange}
+        required         
+      />
 
-        <div className="intem-box">
-          <label htmlFor="email">Votre adresse e-mail</label>
-          <input type="text" name="email" id="email" placeholder="ex. Jean.dupont@example.com" value={formData.email} onChange={handleChange}/>
-        </div>
+      <FormField
+        type="password"
+        name="password"
+        id="password"
+        label="Votre mot de passe"
+        placeholder="8 caractéres au minimum"
+        value={formData.password}
+        onChange={handleChange}
+        required
+      />
 
-        <div className="intem-box">
-          <label htmlFor="password">Votre mot de passe</label>
-          <input type="password" name="password" id="password" placeholder="8 caractéres au minimum" value={formData.password} onChange={handleChange}/>
-        </div>        
+      <FormField
+        type="date"
+        name="birthday"
+        id="birthday"
+        label="Votre date de naissance"
+        placeholder="8 caractéres au minimum"
+        value={formData.birthday}
+        onChange={handleChange}
+        required
+      />
 
-        <div className="intem-box">
-          <label htmlFor="birthday">Votre date de naissance</label>
-          <input type="date" name="birthday" id="birthday" value={formData.birthday} onChange={handleChange}/>
-        </div>
+      <FormField
+        type="number"
+        name="height"
+        id="height"
+        label="Votre taille (en cm)"
+        placeholder="ex. 160"
+        value={formData.height}
+        onChange={handleChange}
+        required
+      />
 
-        <div className="intem-box">
-          <label htmlFor="height">Votre taille (en cm)</label>
-          <input type="number" name="height" id="height" placeholder="ex. 160" value={formData.height} onChange={handleChange}/>
-        </div>
+      <div className="intem-box">
+        <label htmlFor="gender">Votre genre</label>
+        <select name="gender" id="gender" value={formData.gender} onChange={handleChange}>
+          <option value="">Choisissez votre genre</option>
+          <option value="female">Féminin</option>
+          <option value="male">Masculin</option>
+        </select>
+      </div>
 
-        <div className="intem-box">
-          <label htmlFor="gender">Votre genre</label>
-          <select name="gender" id="gender" value={formData.gender} onChange={handleChange}>
-            <option value="">Choisissez votre genre</option>
-            <option value="female">Féminin</option>
-            <option value="male">Masculin</option>
-          </select>
-        </div>
+      <FormField
+        type="number"
+        name="weight"
+        id="weight"
+        label="Votre poids actuel"
+        placeholder="ex. 65"
+        value={formData.weight}
+        onChange={handleChange}
+        required
+      />
 
-        <div className="intem-box">
-          <label htmlFor="weight">Votre poids actuel</label>
-          <input type="number" name="weight" id="weight" placeholder="ex. 65" value={formData.weight} onChange={handleChange}/>
-        </div>
+      <FormField
+        type="number"
+        name="weight"
+        id="weight"
+        label="Votre poids actuel"
+        placeholder="ex. 65"
+        value={formData.weight}
+        onChange={handleChange}
+        required
+      />
 
-        <div className="intem-box">
-          <label htmlFor="goal">Votre objectif</label>
-          <input type="number" name="goal" id="goal" placeholder="ex. 60" value={formData.goal} onChange={handleChange}/>
-        </div>
+      <div className="intem-box">
+        <label htmlFor="goal">Votre objectif</label>
+        <input type="number" name="goal" id="goal" placeholder="ex. 60" value={formData.goal} onChange={handleChange}/>
+      </div>
 
-        <div className="intem-box">
-          <input type="submit" value="S'enregistrer" className="btn-submit"/>
-        </div>
+      <SubmitButton value="S' enregistrer" />
 
-      </form>
-    </>
+    </FormLayout>
   )
 }
 
