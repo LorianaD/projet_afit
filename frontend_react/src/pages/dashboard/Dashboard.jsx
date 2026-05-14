@@ -1,9 +1,9 @@
-import DashboardStats from "../components/Dashboard/DashboardStats.jsx";
-import Sidebar from "../components/Dashboard/Sidebar.jsx";
-import DashboardLastWeights from "../components/Dashboard/DashboardLastWeights.jsx";
-import Main from "../components/ui/Main.jsx";
-import useWeights from "../hooks/useWeights.js";
-import DashboardEvolution from "../components/Dashboard/DashboardEvolution.jsx";
+import DashboardStats from "../../components/Dashboard/DashboardStats.jsx";
+import Sidebar from "../../components/Layout/DashboardSidebar.jsx";
+import DashboardLastWeights from "../../components/Dashboard/DashboardLastWeights.jsx";
+import Main from "../../components/ui/Main.jsx";
+import useWeights from "../../hooks/useWeights.js";
+import DashboardEvolution from "../../components/Dashboard/DashboardEvolution.jsx";
 import { Navigate } from "react-router";
 
 function Dashboard() {
@@ -34,12 +34,11 @@ function Dashboard() {
   const chartData = lastWeightsForChart.map((w) => w.weight);
 
   return (
-    <Main variant="dashboard">
-      <Sidebar/>
-      <DashboardStats stats={stats} weights={weights} error={error}/>
-      <DashboardLastWeights lastWeights={lastWeights} error={error}/>
-      <DashboardEvolution chartLabels={chartLabels} chartData={chartData}/>
-    </Main>
+    <>
+      <DashboardStats stats={stats} weights={weights} error={error} />
+      <DashboardLastWeights lastWeights={lastWeights} error={error} />
+      <DashboardEvolution chartLabels={chartLabels} chartData={chartData} />
+    </>
   )
 }
 

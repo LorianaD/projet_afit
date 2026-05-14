@@ -9,35 +9,40 @@ exports.userProfile = async (req, res) => {
     try {
         
         // on recupére le id du user
-        // const userId = req.Users?.id || req.Users?.sub;
-        // console.log(userId);
+        const userId = req.user?.id || req.user?.sub;
+        // console.log("REQ USER :", req.user);
+        // console.log("USER ID :", userId);
         
 
-        // if (!userId) {
-        //     return res.status(401).json({
-        //         success: false,
-        //         message: "Utilisateur non trouvé",
-        //         data: null
-        //     })
-        // }
+        if (!userId) {
+            return res.status(401).json({
+                success: false,
+                message: "Utilisateur non trouvé",
+                data: null
+            })
+        }
 
         // on recupére les infos de l'utilisateur
-        const user = await Users.findByPk();
-        console.log(user);
+        const user = await Users.findByPk(userId, {
+            attributes: {
+                exclude: ["password"],
+            },
+        });
+        // console.log(user);
         
-        // if (!user) {
-        //     return res.status(404).json({
-        //         success: false,
-        //         message: "utilisateur non réconu",
-        //         data: null
-        //     })
-        // }
+        if (!user) {
+            return res.status(404).json({
+                success: false,
+                message: "utilisateur non réconu",
+                data: null
+            })
+        }
 
-        // res.status(200).json({
-        //     success: true,
-        //     message: 'information du profil',
-        //     data: user
-        // })        
+        res.status(200).json({
+            success: true,
+            message: 'information du profil',
+            data: user
+        })        
 
     } catch (error) {
         console.error('erreur sur la getWeight:', error);

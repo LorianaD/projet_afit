@@ -1,10 +1,10 @@
 import Main from "../../components/ui/Main";
-import WeightsList from "../../components/user/WeightsList";
+import WeightsList from "../../components/ui/WeightsList";
 
 function HistoryWeightPage() {
-    return(
+    return (
         <Main variant="dashboard">
-            <WeightsList/>
+            <WeightsList />
         </Main>
     )
 }

@@ -42,8 +42,8 @@ function generateToken(user) {
     console.log("JWT_SECRET :", process.env.JWT_SECRET);
     return jwt.sign(
         {
-            sub: user.id,
-            username: user.username,
+            id: user.id,
+            email: user.email,
         },
         process.env.JWT_SECRET,
         {

@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import useWeights from "../../hooks/useWeights";
 import { Navigate } from "react-router";
-import SectionHeader from "../ui/SectionHeader";
-import SectionContainer from "../ui/SectionContainer";
+import SectionHeader from "./SectionHeader";
+import SectionContainer from "./SectionContainer";
 import WeightCard from "./WeightCard";
 
 function WeightsList() {
-    
+
     const token = localStorage.getItem("token");
 
     const { weights, stats, error } = useWeights(token);
@@ -28,24 +28,24 @@ function WeightsList() {
         return `${day}-${month}-${year} ${hours}:${minutes}`;
     };
 
-  return (
-    <SectionContainer>
-        <SectionHeader title="Historique"/>
-        
-        <div className="weights-list">
+    return (
+        <SectionContainer>
+            <SectionHeader title="Historique" />
 
-            {weights.map((weight) => (
-                <WeightCard
-                    key={weight.id}
-                    weight={weight}
-                    formatDate={formatDate}
-                />
-            ))}
+            <div className="weights-list">
 
-        </div>
-        
-    </SectionContainer>
-  )
+                {weights.map((weight) => (
+                    <WeightCard
+                        key={weight.id}
+                        weight={weight}
+                        formatDate={formatDate}
+                    />
+                ))}
+
+            </div>
+
+        </SectionContainer>
+    )
 }
 
 export default WeightsList

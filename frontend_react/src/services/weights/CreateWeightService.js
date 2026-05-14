@@ -13,10 +13,6 @@ async function createWeight(formData, token) {
 
     const data = await res.json();
 
-    if (!res.ok) {
-        throw new Error(data.message || "Erreur lors de l'enregistrement");
-    }
-
     return data;
 }
 
