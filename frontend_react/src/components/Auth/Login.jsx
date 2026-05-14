@@ -1,4 +1,3 @@
-import { useState } from "react"
 import { Link, useNavigate } from "react-router"
 import FormLayout from "../ui/form/FormLayout";
 import FormField from "../ui/form/FormField";
@@ -16,8 +15,10 @@ const navigate = useNavigate();
     e.preventDefault();
 
     const result = await submitLogin();
+    console.log("Résultat dans Login.jsx :", result);
 
     if (result.success) {
+      console.log("Redirection dashboard");
       navigate("/dashboard");
     }
   };

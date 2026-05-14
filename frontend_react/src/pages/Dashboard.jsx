@@ -4,6 +4,7 @@ import DashboardLastWeights from "../components/Dashboard/DashboardLastWeights.j
 import Main from "../components/ui/Main.jsx";
 import useWeights from "../hooks/useWeights.js";
 import DashboardEvolution from "../components/Dashboard/DashboardEvolution.jsx";
+import { Navigate } from "react-router";
 
 function Dashboard() {
 

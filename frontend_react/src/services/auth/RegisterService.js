@@ -1,7 +1,7 @@
 const API_URL = import.meta.env.VITE_API_URL;
 
-async function loginUser(formData) {
-    const res = await fetch(`${API_URL}/auth/login`, { 
+async function registerUser(formData) {
+    const res = await fetch(`${API_URL}/auth/register`, { 
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -14,4 +14,4 @@ async function loginUser(formData) {
     return result;
 }
 
-export default loginUser;
+export default registerUser;

@@ -1,11 +1,19 @@
 import { useState } from "react";
-import loginUser from "../services/auth/LoginService";
+import registerUser from "../services/auth/RegisterService";
 
-function useLogin() {
+function useRegister() {
 
     const [formData, setFormData] = useState({
+        name: "",
+        firstname: "",
+        username: "",
         email: "",
         password: "",
+        birthday: "",
+        height: "",
+        gender: "",
+        weight: "",
+        goal: "",
     });
 
     const [error, setError] = useState("");
@@ -21,25 +29,21 @@ function useLogin() {
         });
     };
 
-    const submitLogin = async () => {
+    const submitRegister = async () => {
 
         setError("");
         setMessage("");
 
-        const result = await loginUser(formData);
-        console.log("Résultat API dans useLogin :", result);
+        const result = await registerUser(formData);
 
-        const token = result.data?.token;
-        console.log("Token reçu :", token);
+        if (!result.success) {
 
-        if (!token) {
-            setError("Token non reçu");
+            setError(result.message);
+
             return { success: false };
         }
 
-        localStorage.setItem("token", token);
-
-        console.log("Token enregistré :", localStorage.getItem("token"));
+        setMessage("Compte créé avec succès !");
 
         return { success: true };
     };
@@ -49,8 +53,8 @@ function useLogin() {
         error,
         message,
         handleChange,
-        submitLogin,
+        submitRegister,
     };
 }
 
-export default useLogin;
+export default useRegister;

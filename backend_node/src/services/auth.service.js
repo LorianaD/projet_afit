@@ -1,7 +1,9 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const db = require('../models');
+
 const User = db.Users;
+const Weight = db.weight;
 
 const saltRounds = 10;
 
@@ -12,6 +14,7 @@ async function register(payload) {
 
     try {
         const user = await User.create({name, firstname, username, email, password: hash, birthday, height, gender, weight, goal });
+        await Weight.create({weight: weight, user_id: user.id})
         return user;        
     } catch (error) {
         console.error("Erreur dans authService.register :", error);
@@ -36,14 +39,15 @@ async function validateCredentials({email, password}) {
 }
 
 function generateToken(user) {
+    console.log("JWT_SECRET :", process.env.JWT_SECRET);
     return jwt.sign(
         {
             sub: user.id,
             username: user.username,
         },
-        process.env.JWT_TOKEN,
+        process.env.JWT_SECRET,
         {
-            expiresIn: '7d'
+            expiresIn: process.env.JWT_EXPIRES_IN
         }
     )
 }

@@ -1,72 +1,44 @@
-import { useState } from "react"
 import { Link, useNavigate } from "react-router";
+import useRegister from "../../hooks/useRegister";
 import FormLayout from "../ui/form/FormLayout";
 import FormField from "../ui/form/FormField";
 import SubmitButton from "../ui/form/SubmitButton";
-
+import registerUser from "../../services/auth/RegisterService";
 
 function Register() {
-
-  const [formData, setFormData] = useState({name:"", firstname:"", username:"", email:"", password:"", birthday:"", height:"", gender: "", weight:"", goal:""});
-
-  const [error,setError] = useState("");
-  const [message, setMessage] = useState("");
+  const {
+    formData,
+    error,
+    message,
+    handleChange,
+    submitRegister,
+  } = useRegister();
 
   const navigate = useNavigate();
 
-  const handleChange = (e) => {
-    const {name, value} = e.target;
-    setFormData({...formData, [name]: value});
-  }
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError("");
-    setMessage("");
 
-    try {
-      const res = await fetch("http://localhost:3000/api/auth/register",{
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData)
-      });
+    const result = await submitRegister();
 
-      const result = await res.json();
-
-      if (!res.ok) {
-
-        if (res.status === 409) { // 409 = email déjà utilisé
-          setError("E-mail déjà utilisé");
-        } else if (res.status === 400) {
-          setError("Données invalides, veuillez vérifier le formulaire");
-        } else {
-          setError("Une erreur est suvenue");
-        }
-
-        return;
-
-      }
-
-      setMessage("Compte créé avec succès ! Vous pouvez maintenant vous connecter.")
-
-      navigate("/dashboard");
-
-    } catch (error) {
-      console.error("Erreur :", error);
-      setError("Erreur serveur, veuillez réessayer plus tard.");      
+    if (result.success) {
+      navigate("/login");
     }
-  }
+  };
 
   return (
-    <FormLayout title="Inscrivez-vous afin de commencer l'aventure !" footer={
-      <span>
-        Vous êtes déjà inscrit ?{" "}
-        <Link to="/login">Connectez-vous</Link>
-      </span>
-    } >
-
+    <FormLayout
+      title="Inscrivez-vous afin de commencer l'aventure !"
+      submit={handleSubmit}
+      error={error}
+      message={message}
+      footer={
+        <span>
+          Vous êtes déjà inscrit ?{" "}
+          <Link to="/login">Connectez-vous</Link>
+        </span>
+      }
+    >
       <FormField
         type="name"
         name="name"
@@ -89,7 +61,7 @@ function Register() {
         required
       />
 
-      <FormField 
+      <FormField
         type="username"
         name="username"
         id="username"
@@ -97,7 +69,7 @@ function Register() {
         placeholder="ex. JeanGym"
         value={formData.username}
         onChange={handleChange}
-        required        
+        required
       />
 
       <FormField
@@ -108,7 +80,7 @@ function Register() {
         placeholder="ex. Jean.dupont@example.com"
         value={formData.email}
         onChange={handleChange}
-        required         
+        required
       />
 
       <FormField
@@ -116,7 +88,7 @@ function Register() {
         name="password"
         id="password"
         label="Votre mot de passe"
-        placeholder="8 caractéres au minimum"
+        placeholder="8 caractères au minimum"
         value={formData.password}
         onChange={handleChange}
         required
@@ -127,19 +99,7 @@ function Register() {
         name="birthday"
         id="birthday"
         label="Votre date de naissance"
-        placeholder="8 caractéres au minimum"
         value={formData.birthday}
-        onChange={handleChange}
-        required
-      />
-
-      <FormField
-        type="number"
-        name="height"
-        id="height"
-        label="Votre taille (en cm)"
-        placeholder="ex. 160"
-        value={formData.height}
         onChange={handleChange}
         required
       />
@@ -155,11 +115,11 @@ function Register() {
 
       <FormField
         type="number"
-        name="weight"
-        id="weight"
-        label="Votre poids actuel"
-        placeholder="ex. 65"
-        value={formData.weight}
+        name="height"
+        id="height"
+        label="Votre taille (en cm)"
+        placeholder="ex. 160"
+        value={formData.height}
         onChange={handleChange}
         required
       />
@@ -175,15 +135,20 @@ function Register() {
         required
       />
 
-      <div className="intem-box">
-        <label htmlFor="goal">Votre objectif</label>
-        <input type="number" name="goal" id="goal" placeholder="ex. 60" value={formData.goal} onChange={handleChange}/>
-      </div>
+      <FormField
+        type="number"
+        name="goal"
+        id="goal"
+        label="Votre objectif"
+        placeholder="ex. 60"
+        value={formData.goal}
+        onChange={handleChange}
+        required
+      />
 
-      <SubmitButton value="S' enregistrer" />
-
+      <SubmitButton value="S'enregistrer" />
     </FormLayout>
-  )
+  );
 }
 
-export default Register
+export default Register;
