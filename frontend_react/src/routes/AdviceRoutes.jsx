@@ -1,10 +1,11 @@
 import { Route, Routes } from "react-router";
-import AdvicePage from "../pages/AdvicePage";
+import { DietaryGoals, PrincipalePage } from "../pages/AdvicesPages";
 
 function AdviceRoutes() {
   return (
     <Routes>
-        <Route index element={<AdvicePage />} ></Route>
+        <Route index element={<PrincipalePage />} ></Route>
+        <Route path="dietary-goals" element={<DietaryGoals />} ></Route>
     </Routes>
   );
 }

@@ -1,4 +1,4 @@
-import Btn from './Btn.jsx'
+import { Btn } from "../buttons";
 
 function SectionHeader({ title, description, link, cta, align = "left" }) {
     return (

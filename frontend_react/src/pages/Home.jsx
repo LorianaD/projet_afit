@@ -1,4 +1,4 @@
-import Main from "../components/ui/Main.jsx"
+import { Main } from "../components/ui"
 import HeroHome from "../components/Home/HeroHome.jsx"
 import DiscoverHome from "../components/Home/DiscoverHome.jsx"
 import MethodsHome from "../components/Home/MethodsHome.jsx"

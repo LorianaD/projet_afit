@@ -1,6 +1,4 @@
-import SectionContainer from "../ui/SectionContainer";
-import SectionHeader from "../ui/SectionHeader";
-import ProfileInfoItem from "../ui/ProfileInfoItem";
+import { SectionContainer, SectionHeader, ProfileInfoItem } from "../ui";
 import useUser from "../../hooks/useUser";
 
 function Profile() {

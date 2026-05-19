@@ -1,13 +1,15 @@
-import Login from "../components/Auth/Login";
-import Building from "../components/Building";
-import Main from "../components/ui/Main";
+import { useMatch } from "react-router";
+import { Login, Register } from "../components/Auth";
+import { Main } from "../components/ui";
 
 function AuthPage() {
+    const isRegisterPage = useMatch("/auth/register");
+
     return (
         <Main>
-            <Login/>
+            {isRegisterPage ? <Register /> : <Login />}
         </Main>
-    )
+    );
 }
 
 export default AuthPage;

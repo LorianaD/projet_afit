@@ -1,7 +1,5 @@
 import { Link, useNavigate } from "react-router"
-import FormLayout from "../ui/form/FormLayout";
-import FormField from "../ui/form/FormField";
-import SubmitButton from "../ui/form/SubmitButton";
+import { FormLayout, FormField, SubmitButton,  } from "../ui";
 import useLogin from "../../hooks/useLogin";
 
 

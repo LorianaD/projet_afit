@@ -1,9 +1,5 @@
-import Main from "../ui/Main";
-import SectionHero from "../ui/SectionHero";
+import { Main, SectionHero, SectionContainer, SectionHeader, ArticleCard } from "../../components/ui";
 import { articlesSection, hero } from "../../data/guidesPages/principalePage";
-import SectionContainer from "../ui/SectionContainer";
-import ArticleCard from "../ui/ArticleCard";
-import SectionHeader from "../ui/SectionHeader";
 
 function PrincipalePage() {
 

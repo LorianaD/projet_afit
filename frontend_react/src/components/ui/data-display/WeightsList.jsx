@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
-import useWeights from "../../hooks/useWeights";
+import useWeights from "../../../hooks/useWeights";
 import { Navigate } from "react-router";
-import SectionHeader from "./SectionHeader";
-import SectionContainer from "./SectionContainer";
-import WeightCard from "./WeightCard";
+import { SectionHeader, SectionContainer, WeightCard } from "../index";
 
 function WeightsList() {
 

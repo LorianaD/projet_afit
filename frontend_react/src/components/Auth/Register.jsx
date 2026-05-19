@@ -1,8 +1,6 @@
 import { Link, useNavigate } from "react-router";
 import useRegister from "../../hooks/useRegister";
-import FormLayout from "../ui/form/FormLayout";
-import FormField from "../ui/form/FormField";
-import SubmitButton from "../ui/form/SubmitButton";
+import { FormLayout, FormField, SubmitButton } from "../ui";
 import registerUser from "../../services/auth/RegisterService";
 
 function Register() {

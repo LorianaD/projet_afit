@@ -1,5 +1,4 @@
-import Main from "../../components/ui/Main";
-import WeightsList from "../../components/ui/WeightsList";
+import { Main, WeightsList } from "../../components/ui";
 
 function HistoryWeightPage() {
     return (

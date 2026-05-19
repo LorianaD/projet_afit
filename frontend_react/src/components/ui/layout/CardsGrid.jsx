@@ -1,4 +1,4 @@
-import InfoCard from "./InfoCard";
+import { InfoCard } from "../cards";
 
 function CardsGrid({ cards = [] }) {
     if (!cards.length) {

@@ -1,4 +1,4 @@
-import WeightItem from "../ui/WeightItem";
+import { WeightItem } from "../index";
 
 function WeightCard({ weight, formatDate }) {
 

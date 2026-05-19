@@ -5,17 +5,16 @@ import UserRoutes from "./UserRoutes.jsx";
 import GuidesRoutes from "./GuidesRoutes.jsx";
 import BodyRoutes from "./BodyRoutes.jsx";
 import SaisonsRoutes from "./SaisonsRoutes.jsx";
-import AuthRoutes from "./AuthRoutes.jsx";
 
 const appRoutes = [
     { path: "/", element: <Home /> },
     { path: "/login", element: <AuthPage /> },
+    { path: "/auth/register", element: <AuthPage /> },
     { path: "/dashboard/*", element: <UserRoutes /> },
     { path: "/advice/*", element: <AdviceRoutes /> },
     { path: "/guides/*", element: <GuidesRoutes /> },
     { path: "/body/*", element: <BodyRoutes /> },
-    { path: "/saisons/*", element: <SaisonsRoutes /> },
-    { path: "/auth/*", element: <AuthRoutes />}
+    { path: "/saisons/*", element: <SaisonsRoutes /> }
 ];
 
 export default appRoutes;

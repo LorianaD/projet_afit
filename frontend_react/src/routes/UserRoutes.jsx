@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router";
 import ProfilePage from "../pages/dashboard/ProfilePage.jsx";
-import WeightsList from "../components/ui/WeightsList.jsx";
+import { WeightsList } from "../components/ui";
 import Dashboard from "../pages/dashboard/Dashboard.jsx";
 import AddWeightPage from "../pages/AddWeightPage.jsx";
 import HistoryWeightPage from "../pages/dashboard/HistoryWeightPage.jsx";

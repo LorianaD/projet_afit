@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router";
-import GuidesPage from "../pages/GuidesPage";
+import { PrincipalePage } from "../pages/GuidesPages";
 
 function GuidesRoutes() {
   return (
     <Routes>
-        <Route index element={<GuidesPage />} ></Route>
+        <Route index element={<PrincipalePage />} ></Route>
     </Routes>
   );
 }

@@ -1,8 +1,6 @@
 import { useNavigate } from "react-router";
 import useAddWeight from "../../hooks/useAddWeight";
-import FormLayout from "../ui/form/FormLayout";
-import FormField from "../ui/form/FormField";
-import SubmitButton from "../ui/form/SubmitButton";
+import { FormLayout, FormField, SubmitButton } from "../ui";
 
 function AddWeight() {
   const navigate = useNavigate();

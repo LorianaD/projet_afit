@@ -1,4 +1,4 @@
-import SectionHero from "../ui/SectionHero.jsx";
+import { SectionHero } from "../ui";
 import { hero } from "../../data/home.js";
 
 function HeroHome() {

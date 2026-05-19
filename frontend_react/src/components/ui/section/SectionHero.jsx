@@ -1,5 +1,4 @@
-import BadgeSectionHero from "./BadgeSectionHero";
-import Btn from "./Btn";
+import { BadgeSectionHero, Btn } from "../index";
 
 function SectionHero({ title, description, primaryBtn, secondaryBtn, badge, primaryLink, secondaryLink, img }) {
     return (

@@ -1,6 +1,4 @@
-import SectionContainer from "../ui/SectionContainer";
-import SectionHeader from "../ui/SectionHeader";
-import CardsGrid from "../ui/CardsGrid";
+import { SectionContainer, SectionHeader, CardsGrid } from "../ui";
 
 function HomeSection({ data, id, variant = "default", className = "", headerAlign = "left" }) {
     return (

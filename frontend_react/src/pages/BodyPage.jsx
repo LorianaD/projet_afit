@@ -1,5 +1,5 @@
 import Building from "../components/Building";
-import Main from "../components/ui/Main";
+import { Main } from "../components/ui"
 
 function BodyPage() {
     return (

@@ -1,4 +1,4 @@
-import SectionHero from "./ui/SectionHero";
+import {SectionHero} from "./ui/section/index";
 
 function Building() {
     return (

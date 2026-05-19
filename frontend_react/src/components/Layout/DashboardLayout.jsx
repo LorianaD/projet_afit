@@ -1,6 +1,6 @@
 // layouts/DashboardLayout.jsx
 import { Outlet } from "react-router";
-import Main from "../ui/Main";
+import { Main } from "../ui";
 import Sidebar from "./DashboardSidebar";
 
 

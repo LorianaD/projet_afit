@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import Btn from "./Btn";
+import Btn from "../buttons/Btn";
 
 function ArticleCard({ title, description, link, cta, img }) {
     return(

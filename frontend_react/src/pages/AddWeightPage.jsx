@@ -1,4 +1,4 @@
-import Main from "../components/ui/Main.jsx";
+import { Main } from "../components/ui"
 import AddWeight from "../components/Dashboard/AddWeight.jsx";
 
 function AddWeightPage() {

@@ -1,7 +1,6 @@
 import DashboardStats from "../../components/Dashboard/DashboardStats.jsx";
 import Sidebar from "../../components/Layout/DashboardSidebar.jsx";
 import DashboardLastWeights from "../../components/Dashboard/DashboardLastWeights.jsx";
-import Main from "../../components/ui/Main.jsx";
 import useWeights from "../../hooks/useWeights.js";
 import DashboardEvolution from "../../components/Dashboard/DashboardEvolution.jsx";
 import { Navigate } from "react-router";
